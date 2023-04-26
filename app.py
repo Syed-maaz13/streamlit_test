@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.express as px
 
 def main():
     st.title("Privacy Preserving Data Mining using Transformation Based Noise Addition")
@@ -14,6 +15,9 @@ def main():
                 # read the uploaded file as a pandas dataframe
                 st.write("Score for NNA - 0.7293931")
                 st.write("Score for TBNA - 0.7777778")
+
+                fig = px.bar(x=["NNA", "TBNA"], y=[72, 77])
+                st.plotly_chart(fig)
         
 
 if __name__ == '__main__':

@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
 
 def main():
     st.title("Privacy Preserving Data Mining using Transformation Based Noise Addition")
@@ -15,13 +14,6 @@ def main():
                 # read the uploaded file as a pandas dataframe
                 st.write("Score for NNA - 0.7293931")
                 st.write("Score for TBNA - 0.7777778")
-
-                # create a bar graph comparing two values using matplotlib
-                fig, ax = plt.subplots()
-                ax.bar(["NNA", "TBNA"], [72, 77])
-                ax.set_ylabel('Value')
-                ax.set_title('Comparison of Values')
-                st.pyplot(fig)
         
 
 if __name__ == '__main__':

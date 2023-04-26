@@ -1,6 +1,5 @@
-pip install plotly
 import streamlit as st
-import plotly.express as px
+import matplotlib.pyplot as plt
 
 def main():
     st.title("Privacy Preserving Data Mining using Transformation Based Noise Addition")
@@ -17,8 +16,12 @@ def main():
                 st.write("Score for NNA - 0.7293931")
                 st.write("Score for TBNA - 0.7777778")
 
-                fig = px.bar(x=["NNA", "TBNA"], y=[72, 77])
-                st.plotly_chart(fig)
+                # create a bar graph comparing two values using matplotlib
+                fig, ax = plt.subplots()
+                ax.bar(["NNA", "TBNA"], [72, 77])
+                ax.set_ylabel('Value')
+                ax.set_title('Comparison of Values')
+                st.pyplot(fig)
         
 
 if __name__ == '__main__':
